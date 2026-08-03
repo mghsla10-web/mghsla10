@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مغسلة الانتريهات والموكيت الآلية - العاشر من رمضان</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d2b5c;
+            --secondary-color: #1a56b8;
+            --accent-color: #f39c12;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Features/Offer Banner */
+        .offer-banner {
+            background: linear-gradient(135deg, #1a56b8, #0d2b5c);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .offer-banner h2 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* Services Grid */
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.8rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Features List */
+        .features {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .features ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .features li i {
+            color: #27ae60;
+            font-size: 1.3rem;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1rem;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+
+        .btn-call {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+
+        /* Floating Call Button */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #081b3a;
+            color: white;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🛋️ مغسلة الانتريهات والموكيت الآلية</h1>
+        <p><i class="fas fa-map-marker-alt"></i> العاشر من رمضان</p>
+        <div class="badge">نظافة احترافية ... كما يجب أن تكون ✨</div>
+    </header>
+
+    <div class="container">
+
+        <!-- Special Offer Banner -->
+        <div class="offer-banner">
+            <h2>🎉 عرض الافتتاح الخاص!</h2>
+            <p>خصم <strong>10%</strong> لأول 15 عميل - احجز مكانك الآن!</p>
+        </div>
+
+        <!-- Services Section -->
+        <h2 class="section-title">خدماتنا المتخصصة</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-couch"></i>
+                <h3>غسيل الانتريهات</h3>
+                <p>تنظيف عميق وإزالة أصعب البقع مع الحفاظ على الأنسجة والجودة.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chair"></i>
+                <h3>غسيل الركن</h3>
+                <p>تعقيم وتنظيف شامل للركنات بجميع أنواعها وأحجامها في مكانها.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-vector-square"></i>
+                <h3>غسيل الموكيت الكامل</h3>
+                <p>خدمة فورية وشاملة لموكيت والسجاد بدون الحاجة لنقله.</p>
+            </div>
+        </div>
+
+        <!-- Features List -->
+        <div class="features">
+            <h2 class="section-title">لماذا تختارنا؟</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> خامات آمنة على جميع أنواع الأقمشة</li>
+                <li><i class="fas fa-check-circle"></i> تنظيف عميق وإزالة البقع والروائح</li>
+                <li><i class="fas fa-check-circle"></i> تعقيم وقتل البكتيريا لحماية أسرتك</li>
+                <li><i class="fas fa-check-circle"></i> خدمة فورية بدون نقل (في المنزل)</li>
+                <li><i class="fas fa-check-circle"></i> خدمة استلام وتسليم لراحتك</li>
+                <li><i class="fas fa-check-circle"></i> معدات آلية متطورة وسرعة تنفيذ</li>
+            </ul>
+        </div>
+
+        <!-- Gallery Section -->
+        <h2 class="section-title">معرض الصور والأعمال</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/banner.png" alt="بنر المغسلة"></div>
+            <div class="gallery-item"><img src="images/cleaning1.jpg" alt="غسيل انتريه"></div>
+            <div class="gallery-item"><img src="images/before_after.jpg" alt="قبل وبعد الغسيل"></div>
+            <div class="gallery-item"><img src="images/logo.jpg" alt="لوجو المغسلة"></div>
+            <div class="gallery-item"><img src="images/opening.jpg" alt="عرض الافتتاح"></div>
+            <div class="gallery-item"><img src="images/services.png" alt="خدماتنا وسيارات النقل"></div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2>💙 هدفنا تقديم أفضل خدمة بأعلى جودة وأسعار مناسبة</h2>
+            <p style="margin-top: 10px;">للحجز والاستفسار اتصل بنا الآن:</p>
+            
+            <div class="btn-group">
+                <a href="tel:01117621088" class="btn btn-call">
+                    <i class="fas fa-phone"></i> 01117621088
+                </a>
+                <a href="tel:01006928382" class="btn btn-call">
+                    <i class="fas fa-phone"></i> 01006928382
+                </a>
+                <a href="https://wa.me/201117621088" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating Whatsapp Button -->
+    <a href="https://wa.me/201117621088" class="floating-btn" target="_blank" title="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; مغسلة الانتريهات والموكيت الآلية بالعاشر من رمضان - جميع الحقوق محفوظة</p>
+    </footer>
+
+</body>
+</html>
