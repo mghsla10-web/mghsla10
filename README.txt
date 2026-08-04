@@ -1,1 +1,0 @@
-ضع صور logo.jpg و poster.jpg داخل مجلد images.
