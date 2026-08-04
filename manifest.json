@@ -1,0 +1,15 @@
+{
+  "name": "مغسلة الانتريهات والموكيت الكامل",
+  "short_name": "مغسلة الانتريهات",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b4ea2",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
