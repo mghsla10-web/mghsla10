@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mghsla10-web.github.io/mghsla10/sitemap.xml
